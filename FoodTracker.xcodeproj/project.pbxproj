@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		C00943152295C83F00E63A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00943132295C83F00E63A1D /* LaunchScreen.storyboard */; };
 		C00943202295C83F00E63A1D /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C009431F2295C83F00E63A1D /* FoodTrackerTests.swift */; };
 		C009432B2295C83F00E63A1D /* FoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C009432A2295C83F00E63A1D /* FoodTrackerUITests.swift */; };
+		C0A8AD142295DDB200B84128 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A8AD132295DDB200B84128 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		C00943262295C83F00E63A1D /* FoodTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C009432A2295C83F00E63A1D /* FoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerUITests.swift; sourceTree = "<group>"; };
 		C009432C2295C83F00E63A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A8AD132295DDB200B84128 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,6 @@
 				8AFA1A6C837E13D17788E0F9 /* Pods-FoodTrackerUITests.debug.xcconfig */,
 				027A94A89BD6F62382552D39 /* Pods-FoodTrackerUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,7 @@
 			children = (
 				C009430A2295C83E00E63A1D /* AppDelegate.swift */,
 				C009430C2295C83E00E63A1D /* ViewController.swift */,
+				C0A8AD132295DDB200B84128 /* Meal.swift */,
 				C009430E2295C83E00E63A1D /* Main.storyboard */,
 				C00943112295C83F00E63A1D /* Assets.xcassets */,
 				C00943132295C83F00E63A1D /* LaunchScreen.storyboard */,
@@ -389,6 +391,7 @@
 			files = (
 				C009430D2295C83E00E63A1D /* ViewController.swift in Sources */,
 				C009430B2295C83E00E63A1D /* AppDelegate.swift in Sources */,
+				C0A8AD142295DDB200B84128 /* Meal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
