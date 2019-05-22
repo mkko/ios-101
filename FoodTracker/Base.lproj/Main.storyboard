@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JzA-hg-EQR">
-                                <rect key="frame" x="20" y="87" width="374" height="478.5"/>
+                                <rect key="frame" x="20" y="87" width="374" height="526.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQv-HH-6mE">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
@@ -56,6 +56,15 @@
                                             <outletCollection property="gestureRecognizers" destination="IkM-7U-bij" appends="YES" id="biC-eb-HbP"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-CQ-0ID" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="0.0" y="486.5" width="220" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aYb-5u-BgN" firstAttribute="width" secondItem="JzA-hg-EQR" secondAttribute="width" id="Ssv-lV-lgg"/>
@@ -83,6 +92,7 @@
                         <outlet property="mealNameLabel" destination="RQv-HH-6mE" id="DVx-WQ-ebG"/>
                         <outlet property="nameTextField" destination="aYb-5u-BgN" id="XXd-Wg-lHe"/>
                         <outlet property="photoImageView" destination="PXx-oO-Y9a" id="dAM-Do-pMI"/>
+                        <outlet property="ratingView" destination="rfx-CQ-0ID" id="nmp-aE-b7X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJY-MH-x93" sceneMemberID="firstResponder"/>
