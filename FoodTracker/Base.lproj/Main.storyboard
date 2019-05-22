@@ -10,24 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--New Meal-->
         <scene sceneID="xuV-oc-hTI">
             <objects>
-                <viewController id="dUd-qh-BTK" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dUd-qh-BTK" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LMB-SQ-6OE"/>
                         <viewControllerLayoutGuide type="bottom" id="u8s-lf-9I2"/>
@@ -54,6 +40,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOh-La-vpf">
                                         <rect key="frame" x="0.0" y="66.5" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="dUd-qh-BTK" eventType="touchUpInside" id="8Uj-26-qR4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -70,11 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="Xdi-MM-wvy"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="M2E-Ge-mYO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HSO-rK-suz">
-                            <connections>
-                                <action selector="cancel:" destination="dUd-qh-BTK" id="V16-Tu-sGN"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HSO-rK-suz"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="vxy-bd-P2r">
                             <connections>
                                 <segue destination="TtM-wi-3e7" kind="unwind" unwindAction="unwindToMealListWithSender:" id="Psb-ln-GdK"/>
@@ -82,17 +67,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="nameTextField" destination="aYb-5u-BgN" id="NVS-Z8-gtp"/>
-                        <outlet property="saveButton" destination="vxy-bd-P2r" id="mlH-BA-4mv"/>
+                        <outlet property="mealNameLabel" destination="RQv-HH-6mE" id="DVx-WQ-ebG"/>
+                        <outlet property="nameTextField" destination="aYb-5u-BgN" id="XXd-Wg-lHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJY-MH-x93" sceneMemberID="firstResponder"/>
                 <exit id="TtM-wi-3e7" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="Ple-7K-FMo">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="dUd-qh-BTK" id="RJ1-Sw-cDF"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ple-7K-FMo"/>
             </objects>
             <point key="canvasLocation" x="1326" y="130"/>
         </scene>
