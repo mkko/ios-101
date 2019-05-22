@@ -23,10 +23,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JzA-hg-EQR">
-                                <rect key="frame" x="20" y="87" width="374" height="96.5"/>
+                                <rect key="frame" x="20" y="87" width="374" height="478.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQv-HH-6mE">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="20.5"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -44,9 +45,21 @@
                                             <action selector="setDefaultLabelText:" destination="dUd-qh-BTK" eventType="touchUpInside" id="8Uj-26-qR4"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PXx-oO-Y9a">
+                                        <rect key="frame" x="0.0" y="104.5" width="374" height="374"/>
+                                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="PXx-oO-Y9a" secondAttribute="height" multiplier="1:1" id="9qT-Km-6eA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="IkM-7U-bij" appends="YES" id="biC-eb-HbP"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aYb-5u-BgN" firstAttribute="width" secondItem="JzA-hg-EQR" secondAttribute="width" id="Ssv-lV-lgg"/>
+                                    <constraint firstItem="PXx-oO-Y9a" firstAttribute="width" secondItem="JzA-hg-EQR" secondAttribute="width" id="ijb-tH-yRN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -69,11 +82,16 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="RQv-HH-6mE" id="DVx-WQ-ebG"/>
                         <outlet property="nameTextField" destination="aYb-5u-BgN" id="XXd-Wg-lHe"/>
+                        <outlet property="photoImageView" destination="PXx-oO-Y9a" id="dAM-Do-pMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJY-MH-x93" sceneMemberID="firstResponder"/>
                 <exit id="TtM-wi-3e7" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="Ple-7K-FMo"/>
+                <tapGestureRecognizer id="IkM-7U-bij">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="dUd-qh-BTK" id="WoL-zb-jlg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1326" y="130"/>
         </scene>
